@@ -10,6 +10,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 .bg {
@@ -102,13 +103,14 @@ body {
 }
 
 .infobox-body strong {
+    font-size: 18px;
     text-decoration: underline;
     color: var(--hellorange);
     text-shadow: var(--umrandung);
 }
 
 .infobox-body p {
-    font-size: 20px;
+    font-size: 16px;
     margin: 8px;
     color: var(--gelb);
     text-shadow: var(--umrandung);
