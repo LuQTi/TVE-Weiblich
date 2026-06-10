@@ -1,9 +1,9 @@
 :root {
     --gelb: rgb(255, 238, 0);
     --blau: rgb(0, 102, 255);
-    --orange: rgb(255, 115, 0);
+    --orange: rgb(255, 80, 0);
     --hellorange: rgb(255, 166, 0);
-    --grau: rgb(100, 100, 100);
+    --grau: rgb(65, 65, 65);
     --umrandung: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
 }
 
