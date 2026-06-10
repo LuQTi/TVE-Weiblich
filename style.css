@@ -1,0 +1,203 @@
+:root {
+    --gelb: rgb(255, 238, 0);
+    --blau: rgb(0, 102, 255);
+    --orange: rgb(255, 115, 0);
+    --hellorange: rgb(255, 166, 0);
+    --grau: rgb(100, 100, 100);
+    --umrandung: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background: url(img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    will-change: transform;
+    z-index: -1;
+}
+
+.title {
+    font-size: 60px;
+    margin: 8px;
+    color: var(--gelb);
+    text-shadow: var(--umrandung);
+}
+
+.subtitle {
+    font-size: 30px;
+    margin: 0px;
+    text-decoration: underline;
+    color: var(--grau);
+    display: block;
+}
+
+.subsubtitle {
+    font-size: 24px;
+    margin: 8px;
+    color: var(--orange);
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox {
+    display: block;
+    text-decoration: none;
+    width: 400px;
+    margin: 16px;
+    padding: 0px 24px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px black;
+    cursor: pointer;
+    background: rgba(0, 102, 255, 0.75);
+}
+
+.infobox-head {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    margin-bottom: 0px;
+    height: 80px;
+    border-bottom: 1px solid blue;
+}
+
+.infobox-head-icon {
+    grid-column: 1;
+}
+
+.infobox-head-icon p {
+    font-size: 50px;
+    margin: 4px;
+    text-align: center;
+    justify-content: center;
+}
+
+.infobox-head-content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.infobox-head-content h2,
+.infobox-head-content h3 {
+    margin: 4px;
+    color: var(--gelb);
+    text-shadow: var(--umrandung);
+}
+
+.infobox-body strong {
+    text-decoration: underline;
+    color: var(--hellorange);
+    text-shadow: var(--umrandung);
+}
+
+.infobox-body p {
+    font-size: 20px;
+    margin: 8px;
+    color: var(--gelb);
+    text-shadow: var(--umrandung);
+}
+
+.email {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 32px;
+    margin: 16px;
+    box-shadow: 0px 0px 4px black;
+    justify-content: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.email p,
+.email a {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.logo {
+    width: 100px;
+    margin: 16px;
+    cursor: pointer;
+}
+
+.mobile-break {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 20px;
+        text-align: center;
+    }
+    .subsubtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+    .infobox {
+        width: calc(100% - 48px);
+        max-width: 400px;
+        padding: 4px 12px;
+        box-sizing: border-box;
+    }
+    .infobox-head {
+        grid-template-columns: 60px 1fr;
+        height: auto;
+        min-height: 60px;
+    }
+    .infobox-head-icon p {
+        font-size: 36px;
+    }
+    .infobox-head-content h2 {
+        font-size: 20px;
+    }
+    .infobox-head-content h3 {
+        font-size: 16px;
+    }
+    .infobox-body strong {
+        font-size: 14px;
+    }
+    .infobox-body p {
+        font-size: 12px;
+        margin: 4px;
+    }
+    .email {
+        width: calc(100% - 48px);
+        max-width: 400px;
+        padding: 12px 16px;
+        box-sizing: border-box;
+        height: auto;
+    }
+    .email p,
+    .email a {
+        font-size: 14px;
+        word-break: break-word;
+    }
+    .logo {
+        width: 80px;
+    }
+    .mobile-break {
+        display: inline;
+    }
+}
